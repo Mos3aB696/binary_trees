@@ -48,9 +48,9 @@ int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (binary_tree_is_leaf(tree))
 		return (1);
-	
+
 	if (binary_tree_is_parent(tree))
 		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
-	
+
 	return (0);
 }
