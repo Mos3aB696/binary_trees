@@ -5,32 +5,31 @@
  * height of a binary tree
  * @tree: pointer to the root node of the tree to measure the height.
  *
- * Return: the height of tree or 0
+ * Return: height of tree or 0
  */
 size_t height_recursion(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
 
-	size_t left_subtree = 0;
-	size_t right_subtree = 0;
+	size_t left = 0;
+	size_t right = 0;
 
-	left_subtree = height_recursion(tree->left);
-	right_subtree = height_recursion(tree->right);
+	left = height_recursion(tree->left);
+	right = height_recursion(tree->right);
 
-	if (right_subtree > left_subtree)
+	if (right > left)
 	{
-		return (right_subtree + 1);
+		return (right + 1);
 	}
 	else
 	{
-		return (left_subtree + 1);
+		return (left + 1);
 	}
 }
 
 /**
- * binary_tree_height - measures the
- * height of a binary tree
+ * binary_tree_height - calls the height_recursion
  * @tree: pointer to the root node of the tree to measure the height.
  *
  * Return: the height of tree or 0
