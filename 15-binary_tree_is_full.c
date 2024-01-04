@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_has_child - function checks if a node is parent
+ * binary_tree_is_parent - function checks if a node is parent
  * to two child
  * @node: pointer to the node of the tree
  *
