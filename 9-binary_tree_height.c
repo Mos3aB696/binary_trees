@@ -9,11 +9,11 @@
  */
 size_t height_recursion(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (0);
-
 	size_t left_subtree = 0;
 	size_t right_subtree = 0;
+
+	if (tree == NULL)
+		return (0);
 
 	left_subtree = height_recursion(tree->left);
 	right_subtree = height_recursion(tree->right);
